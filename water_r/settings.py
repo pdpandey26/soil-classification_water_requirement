@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rq6-7o)++n*n^_d-&h$u!c!ts+#4iung$=e1r(%v%s53e2jxj#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['prateek-water.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['farmers123.herokuapp.com,'127.0.0.1']
 
 
 # Application definition
