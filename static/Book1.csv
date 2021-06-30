@@ -1,0 +1,15 @@
+Crop,temp1,temp2,month1,month2,soil,water
+banana,20,35,6,9,"clay,alluvial,black",5.15
+wheat,15,25,11,4,"clay,alluvial,red",4
+soyabean,16,30,6,9,"alluvial,black",4.1
+cabbage,15,24,8,11,"red,clay,alluvial",3.26
+potato,18,30,10,12,"red,clay,alluvial",5
+rice,20,35,1,12,"clay,red,alluvial",10
+melon,21,32,5,9,black,3.6
+maize,18,27,1,12,"black,alluvial",3.5
+bean,18,27,1,2,"alluvial,clay",4
+mustard,15,25,10,12,"red,clay",3.5
+cotton,20,32,4,12,"red,black,alluvial",5.26
+sugarcane,20,30,1,12,"black,alluvial,red",6.25
+tomato,21,30,3,6,"alluvial,clay",3.75
+onion,13,25,1,12,clay,2.5

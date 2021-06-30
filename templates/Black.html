@@ -1,0 +1,110 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>RESULT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'Black.css'%}" >
+		<link rel="icon" 
+      	type="image/png" 
+      	href="https://freepngimg.com/download/agriculture/8-2-agriculture-png-pic.png">
+		<noscript><link rel="stylesheet" href="{% static 'noscript.css'%}"></noscript>
+		
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg" style="background: #348cb2 url('https://filmymantra.com/wp-content/uploads/2015/08/kids1.jpg');
+			background-repeat:no-repeat;
+			height: 100%;
+			left: 0;
+			opacity: 1;
+			position: fixed;
+			top: 0;
+			-moz-animation: bg 60s linear infinite;
+			-webkit-animation: bg 60s linear infinite;
+			-ms-animation: bg 60s linear infinite;
+			animation: bg 60s linear infinite;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+			background-size:cover;
+		width: 6750px;"></div>
+			<div id="overlay" style="-moz-animation: overlay 1.5s 1.5s forwards;
+			-webkit-animation: overlay 1.5s 1.5s forwards;
+			-ms-animation: overlay 1.5s 1.5s forwards;
+			animation: overlay 1.5s 1.5s forwards;
+			background-attachment:fixed;
+			background-image: url('https://img1.goodfon.com/wallpaper/nbig/f/a6/makro-pshenica-rozh-kolosya-5970.jpg'); 
+			background-position: top left, center center;
+			background-repeat:no-repeat;
+			background-size: cover;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;"></div>
+			<div id="main">
+					<header id="header">
+						<h1>CROP : {{plant}}  </h1>
+				{% if crop == 0 %}
+            <p><b>TEMPERATURE:- {{temp}} &#176; celcius</p></b>
+          <p><b>WEATHER CONDITION:- {{des}} </p></b>
+        <p><b>HUMIDITY:- {{hum}} % </p></b>
+						<p><b>{{plant}}</b> is not possible to grow under this condition</p>
+						<p><b>{{plant}}</b> इस स्थिति में बढ़ना संभव नहीं है </p>
+						<p><b>{{plant}}</b> ಈ ಸ್ಥಿತಿಯಲ್ಲಿ ಬೆಳೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</p>
+        {% elif crop == 1 %}
+        <p><b>TEMPERATURE:- {{temp}} &#176; celcius</p></b>
+		<p><b>WEATHER CONDITION:- {{des}} </p></b>
+		<p><b>HUMIDITY:- {{hum}} % </p></b>
+        
+          <p><b>{{plant}}</b> not needed to be watered right now as it already raining/it may rain</p>
+        
+          <p><b>{{plant}}</b> अभी पानी देने की जरूरत नहीं है क्योंकि पहले से ही बारिश हो रही है/बारिश हो सकती है </p>
+        
+          <p><b>{{plant}}</b> ಈಗಾಗಲೇ ಮಳೆಯಾಗುತ್ತಿರುವ ಕಾರಣ ಇದೀಗ ನೀರಿರುವ ಅಗತ್ಯವಿಲ್ಲ/ಮಳೆ ಬೀಳಬಹುದು</p>
+        
+        {% elif crop == 2 %}
+        <p><b>TEMPERATURE:- {{temp}} &#176; celcius </p></b>
+        
+        <p><b>WEATHER CONDITION:- {{des}} </p></b>
+      
+      <p><b>HUMIDITY:- {{hum}} % </p></b>
+      
+          <p><b>{{plant}}</b> can't be grown on {{soil}} soil</p>
+        
+          <p><b>{{plant}}</b>  इस  {{soil}}  मिट्टी पर नहीं उगाया जा सकता </p>
+        
+          <p><b>{{plant}}</b> ಈ {{soil}}  ಮಣ್ಣಿನಲ್ಲಿ ಬೆಳೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</p>
+        
+        {% else %}
+          <p><b>TEMPERATURE:- {{temp}} &#176; celcius</p></b>
+        
+        <p><b>WEATHER CONDITION:- {{des}} </p></b>
+      
+      <p><b>HUMIDITY:- {{hum}} % </p></b>
+      
+          <p><b>{{plant}}</b> needs <b>{{crop}}</b> approximately mm/per day for stable growth</p>
+        
+        <p><b>{{plant}}</b> को उगाने के लिए <b>{{crop}}</b> मिमी/प्रति दिन की आवश्यकता होती है</p>
+        
+        <p><b>{{plant}}</b> ಬಾಳೆಹಣ್ಣು<b>{{crop}}</b> ಬೆಳೆಯಲು ದಿನಕ್ಕೆ ಮಿ.ಮೀ.</p>
+        
+        {% endif%}
+					</header>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
