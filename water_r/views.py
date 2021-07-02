@@ -19,7 +19,7 @@ def model_predict(image_path,model):
     result = np.argmax(model.predict(image))
     return result
 def weather(city,request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?zip={},in&appid=aa1eb6dbb8bfea9d62cc46d564947496'
+    url = 'http://api.openweathermap.org/data/2.5/weather?zip={},in&appid=""
     r = requests.get(url.format(city)).json()
     city_weather = [
         r["main"]["temp"],
